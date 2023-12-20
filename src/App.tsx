@@ -9,7 +9,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles theme={theme} />
-      <Container>
+      <Container data-testid="global-container">
         <HomePage />
       </Container>
     </ThemeProvider>

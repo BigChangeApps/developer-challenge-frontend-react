@@ -27,7 +27,7 @@ const StyledButton = styled.button<StyledButtonProps>(({ theme }) => ({
 }));
   
 const StyledComponent: React.FC<StyledButtonProps > = ({ theme, children, ...restProps }) => {
-    return <StyledButton {...restProps} theme={theme}>{children}</StyledButton>;
+    return <StyledButton type="button" {...restProps} theme={theme}>{children}</StyledButton>;
 };
   
 export default withTheme(StyledComponent);

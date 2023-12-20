@@ -6,6 +6,7 @@ import { withTheme } from '@emotion/react';
 interface StyledContainerProps {
   theme: Theme;
   children?: React.ReactNode;
+  "data-testid": string;
 }
 
 /**
@@ -30,8 +31,8 @@ interface StyledContainerProps {
   },
 }));
 
-const StyledComponent: React.FC<StyledContainerProps> = ({ theme, children }) => {
-  return <StyledContainer theme={theme}>{children}</StyledContainer>;
+const StyledComponent: React.FC<StyledContainerProps> = ({ theme, children, "data-testid": testId }) => {
+  return <StyledContainer theme={theme} data-testid={testId}>{children}</StyledContainer>;
 };
 
 export default withTheme(StyledComponent);

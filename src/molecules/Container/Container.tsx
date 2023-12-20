@@ -7,10 +7,12 @@ export interface ContainerProps {
      * Children of the container.
      */
     children?: React.ReactNode;
+
+    "data-testid": string;
 }
 
-export const Container: FunctionComponent<ContainerProps> = ({children}: ContainerProps) => {
+export const Container: FunctionComponent<ContainerProps> = ({children, "data-testid": testId}: ContainerProps) => {
     return (
-        <StyledContainer>{children}</StyledContainer>
+        <StyledContainer data-testid={testId}>{children}</StyledContainer>
     );
 }

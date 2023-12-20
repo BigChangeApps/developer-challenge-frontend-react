@@ -10,13 +10,24 @@ export interface HomePageProps {
 }
 
 export const HomePage: FunctionComponent<HomePageProps> = () => {
+
+    // Handler for refreshing data
+    const handleRefreshData = async () => {
+       
+    }
+    
     return (
         <HomePageContainer>
             <HeaderBar>BigChange Developer Challenge</HeaderBar>
             <ContentArea>
-
-               <DataDisplay />
-
+              
+                <DataDisplay 
+                    category={"..."} 
+                    question={"..."} 
+                    answer={"..."} 
+                    handleRefreshTrivia={handleRefreshData}  /> 
+        
+              
             </ContentArea>
         </HomePageContainer>
     );
