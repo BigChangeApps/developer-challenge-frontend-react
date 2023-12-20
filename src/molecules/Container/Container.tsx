@@ -8,7 +8,10 @@ export interface ContainerProps {
      */
     children?: React.ReactNode;
 
-    "data-testid": string;
+    /**
+     * Test id for testing.
+     */
+    "data-testid"?: string;
 }
 
 export const Container: FunctionComponent<ContainerProps> = ({children, "data-testid": testId}: ContainerProps) => {

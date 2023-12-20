@@ -12,10 +12,15 @@ export interface ButtonProps {
      * onClick function.
      */
     onClick?: () => void;
+
+    /**
+     * Test id for testing.
+     */
+    "data-testid"?: string;
 }
 
-export const Button: FunctionComponent<ButtonProps> = ({children, ...restProps}: ButtonProps) => {
+export const Button: FunctionComponent<ButtonProps> = ({children, "data-testid": testId, ...restProps}: ButtonProps) => {
     return (
-        <StyledButton {...restProps}>{children}</StyledButton>
+        <StyledButton {...restProps} data-testid={testId}>{children}</StyledButton>
     );
 }

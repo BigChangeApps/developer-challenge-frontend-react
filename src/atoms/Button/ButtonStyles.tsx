@@ -19,6 +19,11 @@ interface StyledButtonProps  {
      * onClick function.
      */
   onClick?: () => void;
+
+   /**
+     * Test id for testing.
+     */
+   "data-testid"?: string;
 }
   
 const StyledButton = styled.button<StyledButtonProps>(({ theme }) => ({
@@ -26,8 +31,8 @@ const StyledButton = styled.button<StyledButtonProps>(({ theme }) => ({
   padding: '10px 20px',
 }));
   
-const StyledComponent: React.FC<StyledButtonProps > = ({ theme, children, ...restProps }) => {
-    return <StyledButton type="button" {...restProps} theme={theme}>{children}</StyledButton>;
+const StyledComponent: React.FC<StyledButtonProps > = ({ theme, children, "data-testid": testId, ...restProps }) => {
+    return <StyledButton type="button" data-testid={testId} {...restProps} theme={theme}>{children}</StyledButton>;
 };
   
 export default withTheme(StyledComponent);

@@ -6,7 +6,7 @@ import { withTheme } from '@emotion/react';
 interface StyledContainerProps {
   theme: Theme;
   children?: React.ReactNode;
-  "data-testid": string;
+  "data-testid"?: string;
 }
 
 /**

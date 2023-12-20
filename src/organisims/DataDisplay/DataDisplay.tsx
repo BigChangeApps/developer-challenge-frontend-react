@@ -27,7 +27,7 @@ const DataDisplay: FunctionComponent<DataDisplayProps> = ({ category, question, 
     return (
         <ContentAreaContainer theme={theme}>{children}
             <ManagementPanel theme={theme}>
-                <Button onClick={handleRefreshTrivia}>New trivia</Button>
+                <Button data-testid='new-trivia-button' onClick={handleRefreshTrivia}>New trivia</Button>
             </ManagementPanel>
             <DataPanel theme={theme}>
                 {canLoadTrivia && ( 
